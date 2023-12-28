@@ -9,10 +9,13 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
+        <li>C++</li>
+        <li>Java</li>
+        <li>JavaScript</li>
         <li>Node.js</li>
         <li>Express</li>
-        <li>JavaScript</li>
         <li>React</li>
+        <li>Next js</li>
         <li>MongoDB</li>
         <li>PostgreSQL</li>
       </ul>
@@ -24,7 +27,6 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
         <li>B.sc in Computer Science & Engineering</li>
-        <li>BGC Trust University BD</li>
       </ul>
     ),
   },
@@ -33,8 +35,8 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2">
-        <li>AWS Cloud Practitioner</li>
-        <li>Google Professional Cloud Developer</li>
+        <li>Programing Hero</li>
+        <li>InternShip From Alchemey Sofware Limited</li>
       </ul>
     ),
   },
@@ -51,12 +53,12 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="text-white" id="about">
+    <section className="text-zinc-300" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <Image src="/images/about-image.png" alt="about" width={500} height={500} />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-          <p className="text-base lg:text-lg">
+          <p className="text-base lg:text-lg text-justify ">
             I am a full stack web developer with a passion for creating
             interactive and responsive web applications. I have experience
             working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
