@@ -2,23 +2,32 @@
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
-
+import img from "public/images/about-image.png";
 const TAB_DATA = [
   {
     title: "Skills",
     id: "skills",
     content: (
-      <ul className="list-disc pl-2">
-        <li>C++</li>
-        <li>Java</li>
+      <div className="flex space-x-20">
+        <ul className="list-disc pl-2">
         <li>JavaScript</li>
-        <li>Node.js</li>
-        <li>Express</li>
+        <li>Python</li>
+        <li>Node js</li>
+        <li>C and C++</li>
+      </ul>
+      <ul className="list-disc pl-2">
         <li>React</li>
         <li>Next js</li>
-        <li>MongoDB</li>
+        <li>Django</li>
+        <li>Express</li>
+      </ul>
+      <ul className="list-disc pl-2">
+        <li>AWS</li>
+        <li>Docker</li>
+        <li>Prisma</li>
         <li>PostgreSQL</li>
       </ul>
+      </div>
     ),
   },
   {
@@ -37,6 +46,8 @@ const TAB_DATA = [
       <ul className="list-disc pl-2">
         <li>Programing Hero</li>
         <li>InternShip From Alchemey Sofware Limited</li>
+        <li>Master Non-Linear Data Structure and Algorithm(codedamn)</li>
+        <li>Master Linear Data Structure and Algorithm(codedamn)</li>
       </ul>
     ),
   },
@@ -54,38 +65,32 @@ const AboutSection = () => {
 
   return (
     <section className="text-zinc-300" id="about">
-      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/about-image.png" alt="about" width={500} height={500} />
-        <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-          <p className="text-base lg:text-lg text-justify ">
-            I am a full stack web developer with a passion for creating
-            interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
-            Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
-            looking to expand my knowledge and skill set. I am a team player and
-            I am excited to work with others to create amazing applications.
+      <div className="md:grid md:grid-cols-2 gap-8   p-6 xl:gap-16 sm:py-16 xl:px-16">
+        <div>
+          <Image src={img} alt="about" className="mt-10" />
+        </div>
+        <div className="mt-4 md:mt-0 flex flex-col h-full">
+          <h2 className="text-4xl font-bold text-gray-200 mb-4">About Me</h2>
+          <p className="text-base lg:text-lg text-justify text-gray-400">
+          Hi! I&rsquo;m Showkatul Islam,I&rsquo;m a full-stack web developer with a passion for building interactive and responsive web experiences.I love the challenge of taking an idea and turning it into a real,functional application.I work with a variety of technologies including JavaScript, React, Node.js, Django,AWS,Docker and more.  
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}
             >
-              {" "}
               Skills{" "}
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("education")}
               active={tab === "education"}
             >
-              {" "}
               Education{" "}
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("certifications")}
               active={tab === "certifications"}
             >
-              {" "}
               Certifications{" "}
             </TabButton>
           </div>
